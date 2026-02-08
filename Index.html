@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAGAR YADAV — Data Scientist Portfolio</title>
+
+  <link rel="icon" type="image/png" href="Images/favicon.png" />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+
+
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @font-face {
+      font-family: "TransformersMovie";
+      src: url("/fonts/TransformersMovie.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+
+    }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Cantarell", "Helvetica Neue", "Arial", "sans-serif"],
+            akaya: ["Akaya Kanadaka", "system-ui"],
+            transformermovie: ["TransformersMovie", "system-ui"]
+          },
+          boxShadow: {
+            subtle: "0 1px 6px 0 rgba(0,0,0,0.06)",
+          }
+        }
+      }
+    } 
+  </script>
+
+</head>
+
+<body class="bg-gray-100 text-black font-sans selection:bg-gray-900 selection:text-white">
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-white/95 border-b border-gray-200">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- Brand -->
+        <a href="Index.html"
+          class="text-lg font-transformermovie font-bold tracking-tight hover:opacity-80 text-blue-800"
+          aria-label="Home">
+          <img src="/Images/ai-data-icon.png" alt="AI and Data Science Icon"
+            class="h-10 w-auto mr-2 inline-block align-middle" />
+          SAGAR YADAV
+        </a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8 text-sm" aria-label="Primary">
+          <a href="/Blogs/Blog Home-page.html" target="_blank" class="hover:text-gray-600 text-blue-800">Blogs</a>
+          <a href="/Pdf/resume.pdf" class="hover:text-gray-600 text-blue-800">My Resume</a>
+          <a href="#projects" class="hover:text-gray-600 text-blue-800">Projects</a>
+          <a href="#experience" class="hover:text-gray-600 text-blue-800">Experience</a>
+          <a href="#contact" class="hover:text-gray-600 text-blue-800">Contact</a>
+        </nav>
+        <!-- Mobile menu button -->
+        <button id="menuBtn"
+          class="md:hidden inline-flex items-center justify-center rounded-lg border border-gray-200 px-3 py-2 hover:bg-gray-100"
+          aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Nav -->
+    <nav id="mobileNav" class="md:hidden hidden border-t border-gray-200" aria-label="Mobile">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-3 flex flex-col gap-3 text-sm">
+        <a href="/Blogs/Blog Home-page.html" target="_blank" class="hover:text-gray-600 text-blue-800">Blogs</a>
+        <a href="/Pdf/resume.pdf" class="hover:text-gray-600 text-blue-800">My Resume</a>
+        <a href="#projects" class="hover:text-gray-600 text-blue-800">Projects</a>
+        <a href="#experience" class="hover:text-gray-600 text-blue-800">Experience</a>
+        <a href="#contact" class="hover:text-gray-600 text-blue-800">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <!-- Hero -->
+    <section class="py-10 sm:py-12">
+      <div class="mx-auto text-center">
+        <img src="/Images/image.png" alt="Profile picture of Sagar Yadav"
+          class="w-48 h-48 rounded-full mx-auto object-cover mb-6 border border-gray-200" />
+        <h1 class="text-3xl sm:text-4xl font-transformermovie font-bold tracking-tight text-blue-800">SAGAR YADAV</h1>
+        <p class="mt-4 text-base sm:text-2xl text-gray-700">Data Scientist <span aria-hidden="true">|</span> AI/ML <span
+            aria-hidden="true">|</span> Generative AI Engineer </p>
+        <p class="text-base mt-2 sm:text-gray-700">Mob: +91-9104371519 <span aria-hidden="true">|</span>
+          <a href="mailto:your.email@example.com"
+            class="underline underline-offset-4 decoration-gray-300 hover:bg-gray-100 rounded px-1">sagar.aidata@gmail.com</a>
+        </p>
+        <p class="mt-4 text-gray-600 leading-relaxed text-lg text-justify ">I am an innovation-driven
+          AI/ML-Data Scientist specializing in Artificial Intelligence, Intelligent Systems, and Cognitive Computing to
+          design scalable, production-grade AI solutions. My work focuses on building end-to-end machine learning and
+          generative AI systems that translate complex data environments into decision intelligence and measurable
+          real-world impact.
+
+          Operating with a think-tank mindset, I approach innovation through interdisciplinary intelligence, combining
+          AI systems, machine learning, deep learning, NLP, multimodal AI, and transformer architectures with systems
+          thinking and strategic foresight. My approach emphasizes non-linear modeling, equation-driven intelligence,
+          and complex adaptive systems, enabling solutions that go beyond traditional linear optimization.
+
+          I am committed to advancing future-ready AI systems by integrating probabilistic reasoning, uncertainty
+          modeling, and quantum-inspired algorithms to address high-complexity, cross-domain challenges. This
+          perspective supports stochastic optimization, adaptive reasoning, and interconnected decision frameworks
+          across evolving technological ecosystems.
+
+          I design and deploy responsible, trustworthy, and explainable AI systems, with a strong focus on AI
+          governance, human-in-the-loop design, MLOps, and scalable AI architectures. My experience spans
+          production-ready pipelines, model lifecycle management, and real-world deployment aligned with enterprise and
+          innovation objectives.
+
+          By leveraging AI-driven, equation-based intelligence models, I enable insight generation, pattern discovery,
+          predictive intelligence, and decision optimization. Treating problems as networks of interdependent variables
+          rather than isolated components allows me to uncover hidden signals, emergent behavior, and transformative
+          opportunities that conventional approaches often overlook. </p>
+        <!-- Socials -->
+        <div class="mt-8 flex items-center justify-center gap-5" aria-label="Social links">
+          <a href="https://github.com/sagarsy2050" target="_blank"
+            class="p-2 rounded-full border border-gray-200 hover:bg-gray-100" aria-label="GitHub">
+            <!-- GitHub Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.486 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.093.682-.216.682-.48 0-.236-.01-1.018-.014-1.847-2.782.606-3.369-1.19-3.369-1.19-.455-1.168-1.11-1.48-1.11-1.48-.908-.623.07-.611.07-.611 1.004.071 1.532 1.035 1.532 1.035.892 1.535 2.341 1.091 2.91.835.091-.65.35-1.09.636-1.342-2.22-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.988 1.03-2.689-.104-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.027A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.297 2.747-1.027 2.747-1.027.547 1.378.204 2.397.1 2.65.64.701 1.028 1.596 1.028 2.689 0 3.849-2.339 4.696-4.566 4.944.358.31.678.922.678 1.86 0 1.344-.012 2.427-.012 2.757 0 .266.18.578.688.48A10.026 10.026 0 0 0 22 12.02C22 6.486 17.523 2 12 2z" />
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/sagarsy2050/" target="_blank"
+            class="p-2 rounded-full border border-gray-200 hover:bg-gray-100" aria-label="LinkedIn">
+            <!-- LinkedIn Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor">
+              <path fill="#0a66c2"
+                d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.24 8.339h4.52V24H.24V8.339zM8.338 8.339h4.332v2.133h.062c.603-1.143 2.078-2.346 4.279-2.346 4.578 0 5.424 3.014 5.424 6.936V24h-4.72v-6.942c0-1.654-.03-3.78-2.304-3.78-2.307 0-2.661 1.803-2.661 3.665V24H8.338V8.339z" />
+            </svg>
+          </a>
+          
+          <a href="https://www.kaggle.com/sagarsy2050/" target="_blank"
+            class="p-2 rounded-full border border-gray-200 hover:bg-gray-100" aria-label="Kaggle">
+            <!-- Simple Kaggle "K" Icon -->
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-8 w-8" fill="currentColor"
+              aria-hidden="true">
+              <path d="M6.5 4h3v6.6L16.3 4H20l-6.9 7.4L21 20h-3.9l-7.6-8v8h-3V4z" />
+            </svg> -->
+            <svg xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 640" class="h-8 w-8" aria-hidden="true"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path fill="#74c0fc"
+                d="M464.2 565.5L318.4 384.3L458.2 249C460.8 246.3 459.9 238.5 452.9 238.5L383.7 238.5C380.2 238.5 376.7 240.3 373.2 243.8L240.9 377.5L240.9 71.5C240.9 66.5 238.4 64 233.4 64L181.5 64C176.5 64 174 66.5 174 71.5L174 568.5C174 573.5 176.5 576 181.5 576L233.4 576C238.4 576 240.9 573.5 240.9 568.5L240.9 459.5L271.7 430.2L382.2 570.8C385.2 574.3 388.7 576.1 392.7 576.1L459.6 576.1C463.1 576.1 465.1 575.1 465.6 573.1L464.2 565.5z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section aria-labelledby="skills-heading" class="py-12 sm:py-16 border-t border-gray-200">
+      <div class="mx-auto max-w-5xl">
+        <h2 id="skills-heading" class="text-2xl font-semibold tracking-tight text-blue-800">Professional Skills</h2>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <!-- Card 1 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>Languages & Databases</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">Python, R, SQL, MySQL, MongoDB</li>
+            </ul>
+          </div>
+          <!-- Card 2 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>Machine Learning</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">Supervised/Unsupervised learning, AutoML, Regression, Classification, Clustering,
+                PCA, Hyperparameter Tuning</li>
+            </ul>
+          </div>
+          <!-- Card 3 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>Libraries</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">TensorFlow, Keras, Scikit-learn, NumPy, Pandas, SciPy, Seaborn, Matplotlib,
+                Yellow- brick, PYSCF, Q-Chem, Hugging Face, Psi4</li>
+            </ul>
+          </div>
+          <!-- Card 4 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>Generative AI</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">GPT, GANs, VAEs, AIAgentic, LLMs – Fine-tuning and application</li>
+            </ul>
+          </div>
+          <!-- Card 5 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>NLP</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">Text classification, summarization, named entity recognition, sentiment analysis
+              </li>
+            </ul>
+          </div>
+          <!-- Card 6 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>Transformer Models</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">BERT, GPT family, LLaMA – for diverse NLP tasks</li>
+            </ul>
+          </div>
+          <!-- Card 7 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>Visualization & Analysis</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">Streamlit, EDA, Feature Engineering, Interactive Dashboards</li>
+            </ul>
+          </div>
+          <!-- Card 8 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>DevTools</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">GitHub, Jupyter, Streamlit</li>
+            </ul>
+          </div>
+          <!-- Card 9 -->
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-subtle transition-shadow">
+            <h3 class="text-sm font-medium tracking-wide uppercase"><b>Optional domain tools</b></h3>
+            <ul class="mt-4 space-y-2 text-gray-700">
+              <li class="text-justify">Familiarity with computational tools like AutoDock & PyRx (for scientific data
+                projects)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-heading" class="py-8 sm:py-8 border-t border-gray-200">
+      <div class="mx-auto max-w-5xl">
+        <h2 id="projects-heading" class="text-2xl font-semibold tracking-tight text-blue-800">Key Projects</h2>
+        <div class="mt-2 flex flex-wrap flex-col sm:flex-row">
+          <!-- Project Card 1 -->
+          <!-- <div class="mt-10 space-y-12 ">
+            <article class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm "> -->
+          <div class="sm:w-1/2 w-full p-2">
+            <h3 class="text-2xl font-bold text-gray-1000">AI-Driven Drug Discovery:</h3>
+            <div class="mt-4 overflow-hidden rounded-lg border">
+              <video autoplay loop muted playsinline class="w-full aspect-video object-cover">
+                <source src="/videos/AI-Driven Drug Discovery.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="mt-5 text-base text-gray-700 text-justify text-sm">To address the critical challenge of
+              late-stage drug failures caused by unforeseen toxicity, we have developed a sophisticated
+              computational
+              framework that significantly improves the accuracy of QSAR and ADMET predictions. Our approach moves
+              beyond traditional models by implementing a powerful ensemble learning strategy, which combines the
+              structural pattern recognition of Graph Neural Networks (GNNs) with the robust predictive power of
+              algorithms like XGBoost and Random Forest.</p>
+
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                Scikit-learn</li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Psi4
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Pandas
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Jupyter
+              </li>
+            </ul>
+          </div>
+          <!-- <br> -->
+          <div class="sm:w-1/2 w-full p-2">
+            <h3 class="text-xl font-bold text-gray-800">QSAR Prediction Enhancement :</h3>
+            <div class="mt-4 overflow-hidden rounded-lg border">
+              <video autoplay loop muted playsinline class="w-full aspect-video object-cover">
+                <source src="/videos/QSAR Prediction Enhancement.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="mt-2 text-base text-gray-700 text-justify text-sm">Our project overcomes classical QSAR
+              limitations by representing molecules as information-rich graphs. We then deploy a precision
+              GNN-XGBoost
+              ensemble with attention models to maximize predictive power. This strategy yielded a significant 15%
+              improvement in accuracy over traditional baseline methods. Critically, our model offers enhanced
+              interpretability, using visual heatmaps to pinpoint drivers of biological activity. This provides
+              actionable insights for chemists, transforming the model from a black box into a valuable discovery
+              tool.</p>
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                TensorFlow
+                / Keras</li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                AIAgentic
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Psi4
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                Streamlit
+              </li>
+            </ul>
+          </div>
+          <!-- <br> -->
+          <div class="sm:w-1/2 w-full p-2">
+            <h3 class="text-xl font-bold text-gray-800">ADMET Toxicology Prediction :</h3>
+            <div class="mt-4 overflow-hidden rounded-lg border">
+              <video autoplay loop muted playsinline class="w-full aspect-video object-cover">
+                <source src="/videos/ADMET Toxicology Prediction.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="mt-2 text-base text-gray-700 text-justify text-sm">To address the critical challenge of
+              inaccurate ADMET prediction in early-stage drug discovery, we developed a precision machine learning
+              model using realistic 2D and 3D molecular representations. Our ensemble approach—combining GNNs,
+              Random
+              Forest, and XGBoost with key chemical descriptors—achieved a 15% improvement in predicting major
+              toxicities like hepatotoxicity and cardiotoxicity. Crucially, our model provides explainable outputs,
+              using heatmaps to identify the specific molecular substructures that drive toxicity.</p>
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                TensorFlow
+                / Keras</li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                AIAgentic
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Psi4
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                Streamlit
+              </li>
+            </ul>
+          </div>
+          <!-- <br> -->
+
+          <!-- </article>
+          </div> -->
+          <!-- Project Card 2 -->
+          <!-- <div class="mt-10 space-y-12 w-2/4">
+            <article class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"> -->
+          <div class="sm:w-1/2 w-full p-2">
+            <h3 class="text-2xl font-bold text-gray-1000 text-left">A Self-Driven AI Laboratory</h3>
+            <div class="mt-4 overflow-hidden rounded-lg border">
+              <video autoplay loop muted playsinline class="w-full aspect-video object-cover">
+                <source src="/videos/A Self-Driven AI Laboratory for Autonomous Chemical Discovery.mp4"
+                  type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="mt-5 text-base text-gray-700 text-justify text-sm">We are developing a self-driven AI
+              laboratory
+              for autonomous chemical discovery that operates with minimal human intervention. This ongoing project
+              integrates agent-based AI, generative models, lab automation, and quantum computing into a single,
+              closed-loop system. The lab is designed to self-guide experiments and automate analysis across
+              critical
+              research areas like chemistry, energy, and defense.</p>
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                Scikit-learn</li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Psi4
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Pandas
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Jupyter
+              </li>
+            </ul>
+            <!-- <br> -->
+          </div>
+          <div class="sm:w-1/2 w-full p-2">
+            <h3 class="text-xl font-bold text-gray-800 text-justify">Quantum Chemistry Property
+              Prediction
+            </h3>
+            <div class="mt-4 overflow-hidden rounded-lg border">
+              <video autoplay loop muted playsinline class="w-full aspect-video object-cover">
+                <source src="/videos/Quantum Chemistry Property Prediction.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="mt-2 text-base text-gray-700 text-justify text-sm">Our project accelerates the discovery of
+              advanced materials by replacing slow quantum simulations with high-speed machine learning models. By
+              predicting critical properties like structural stability and reactivity in seconds instead of hours,
+              our
+              method streamlines the development of novel materials for key applications in energy storage,
+              catalysis,
+              and defense.</p>
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                TensorFlow
+                / Keras</li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                AIAgentic
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Psi4
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                Streamlit
+              </li>
+            </ul>
+            <!-- <br> -->
+          </div>
+          <div class="sm:w-1/2 w-full p-2">
+            <h3 class="text-xl font-bold text-gray-800 text-justify">Agent-Based AI Research
+              Orchestration
+            </h3>
+            <div class="mt-4 overflow-hidden rounded-lg border">
+              <video autoplay loop muted playsinline class="w-full aspect-video object-cover">
+                <source src="/videos/Agent-Based AI Research Orchestration.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p class="mt-2 text-base text-gray-700 text-justify text-sm">We developed an AI orchestration system
+              using
+              a team of specialized agents to autonomously plan, execute, and refine scientific experiments. This
+              multi-agent architecture manages resources across various domains (chemistry, materials, energy) and
+              continuously improves through feedback. The outcome is a facility-wide automation of the research
+              pipeline, which significantly reduces human workload.</p>
+            <ul class="mt-5 flex flex-wrap gap-2" aria-label="Technologies">
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                TensorFlow
+                / Keras</li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                AIAgentic
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">Psi4
+              </li>
+              <li class="inline-block rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700">
+                Streamlit
+              </li>
+            </ul>
+            <!-- <br> -->
+          </div>
+          <!-- </article>
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience (Vertical Timeline) -->
+    <section id="experience" aria-labelledby="experience-heading" class="py-10 sm:py-12 border-t border-gray-200">
+      <div class="mx-auto max-w-5xl">
+        <h2 id="experience-heading" class="text-2xl font-semibold tracking-tight text-blue-800">Work Experience</h2>
+
+        <!-- Grid container for the 3 columns -->
+        <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+
+          <!-- Column 1: Topia Life Sciences -->
+          <article class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm flex flex-col">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">AI-Data Scientist</h3>
+              <p class="text-gray-600">@Topia Life Sciences</p>
+              <p class="mt-1 text-sm text-gray-500">Dec 2023 - Present | Ahmadabad</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside flex-grow">
+              <li class="text-justify">Developed machine learning models for bio-activity prediction (QSAR), toxicity
+                ADMET, and physicochemical properties.</li>
+              <li class="text-justify">Built quantum chemistry equation-based models to predict molecular properties
+                including band gap, HOMO-LUMO, and dipole moments.</li>
+              <li class="text-justify">Conducted data preprocessing, feature engineering, and model performance tuning
+                for high-impact business use cases.</li>
+              <li class="text-justify">Led the development of predictive analytics tools to support decision-making and
+                process optimization.</li>
+              <li class="text-justify">Collaborated with cross-functional teams to integrate ML outputs into product
+                workflows.</li>
+              <li class="text-justify">Improved predictive accuracy and computational efficiency, enabling scalable
+                insights.</li>
+            </ul>
+          </article>
+
+          <!-- Column 2: Sai Life Sciences Ltd -->
+          <article class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm flex flex-col">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">Sr. Research Associate</h3>
+              <p class="text-gray-600">@Sai Life Sciences Ltd</p>
+              <p class="mt-1 text-sm text-gray-500">Jun 2021 – Sep 2022 | Hyderabad</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside flex-grow">
+              <li class="text-justify">Applied machine learning models to scientific datasets to extract patterns,
+                predict outcomes, and automate analysis workflows.</li>
+              <li class="text-justify">Managed end-to-end data workflows including cleaning, transformation, and
+                modeling for large datasets.</li>
+              <li class="text-justify">Developed reproducible ML pipelines for pattern classification, property
+                prediction, and data clustering.</li>
+            </ul>
+          </article>
+
+          <!-- Column 3: AI-Adventures -->
+          <article class="rounded-xl border border-gray-200 bg-white p-6 shadow-sm flex flex-col">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-800">Mentor</h3>
+              <p class="text-gray-600">@AI-Adventures</p>
+              <p class="mt-1 text-sm text-gray-500">Oct 2022 - Nov 2023 | Pune</p>
+            </div>
+            <ul class="mt-4 space-y-2 text-sm text-gray-700 list-disc list-inside flex-grow">
+              <li class="text-justify">Mentored students in data science and AI, guiding them through complex concepts
+                and practical applications.</li>
+              <li class="text-justify">Supported their academic and career development, helping them build skills for
+                real-world challenges.</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Transition -->
+    <section aria-labelledby="about-heading" class="py-12 sm:py-16 border-t border-gray-200">
+      <div class="mx-auto max-w-5xl">
+        <h2 id="about-heading" class="text-2xl font-semibold tracking-tight text-blue-800">Career Transition to AI/ML
+        </h2>
+        <div class="mt-10">
+          <video class="w-full rounded-lg shadow-lg" controls preload="metadata">
+            <source src="/videos/Career transition lab.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <p class="mt-6 text-gray-600 leading-relaxed text-justify text-sm">
+
+          A forward-learning innovation attitude prioritizes adaptability, systems thinking, and continuous learning
+          over static expertise. In AI-driven environments, it treats learning as a strategic capability, enabling
+          experimentation grounded in basic science and the responsible use of AI as an augmentative partner to human
+          judgment. This mindset supports resilient, ethical, and scalable innovation by accelerating cross-disciplinary
+          fluency and reflective practice.
+
+          Prior to 2021, I spent nine years as a Research Associate in pharmaceutical R&D and analytical chemistry,
+          building a strong foundation in experimental rigor, data integrity, and computational problem-solving. These
+          skills now directly inform my work in AI and machine learning, where scientific discipline and
+          interdisciplinary thinking are critical to impactful innovation.</p>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section aria-labelledby="edu-heading" class="py-12 sm:py-16 border-t border-gray-200">
+      <div class="mx-auto max-w-5xl">
+        <h2 id="edu-heading" class="text-2xl font-semibold tracking-tight text-blue-800">Education, Certifications and
+          Languages</h2>
+        <div class="mt-8 flex flex-col md:flex-row justify-between">
+          <div>
+            <h3 class="text-sm font-medium tracking-wide uppercase">Education</h3>
+            <ul class="mt-4 space-y-1 text-gray-700">
+              <li><span class="font-medium">Post Graduate Diploma in Machine Learning and AI</span></li>
+              <li><span class="text-gray-500">Amity University Online</span></li>
+              <li><span class="text-gray-500">Aug 2018 – Dec 2019</span></li>
+              <li><span class="font-medium">M.Sc. in Analytical Chemistry</span></li>
+              <li><span class="text-gray-500">Nowrosjee Wadia College, Pune University</span></li>
+              <li><span class="text-gray-500">2010</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium tracking-wide uppercase">Certifications</h3>
+            <ul class="mt-4 space-y-1 text-gray-700">
+              <li><span class="font-medium">Sensors and Actuators</span></li>
+              <li><span class="text-gray-500">IISc Bangalore</span></li>
+              <li><span class="text-gray-500">Jul – Oct 2019 </span></li>
+              <li><span class="font-medium">Bioinformatics: Algorithms and Applications</span></li>
+              <li><span class="text-gray-500">IIT Madras</span></li>
+              <li><span class="text-gray-500">Jan – Apr 2020</span></li>
+              <li><span class="font-medium">Design Thinking - A Primer</span></li>
+              <li><span class="text-gray-500">IIT Madras</span></li>
+              <li><span class="text-gray-500">Jul – Aug 2021</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-sm font-medium tracking-wide uppercase">Languages</h3>
+            <ul class="mt-4 space-y-1 text-gray-700">
+              <li><span class="font-medium">English</span></li>
+              <li><span class="font-medium">Hindi</span></li>
+              <li><span class="font-medium">Marathi</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading" class="py-12 sm:py-16 border-t border-gray-200">
+      <div class="mx-auto max-w-6xl text-center">
+        <h2 id="contact-heading" class="text-2xl font-semibold tracking-tight text-blue-800">Get In Touch</h2>
+        <p class="text-justify text-lg">
+          I'm passionate about building innovative solutions driven by a forward-thinking mindset and a strong
+          perception
+          for interdisciplinary collaboration. I believe innovation thrives when we move beyond silos—integrating
+          technology, design, business, and human insight to solve complex challenges.
+
+          My approach is rooted in systems thinking and quantum-equation-based innovation principles, where multiple
+          variables interact dynamically to create exponential impact rather than linear outcomes. By embracing this
+          mindset, I focus on adaptability, interconnected problem-solving, and transforming ideas into scalable,
+          real-world solutions.
+
+          I value inclusive thinking, continuous learning, and cross-functional collaboration that fuels creativity and
+          accelerates innovation. If you're looking for a dedicated professional who brings interdisciplinary insight
+          and
+          advanced innovation thinking to your team, I'd love to explore how we could work together. Please feel free to
+          reach out.
+        </p>
+        <p class="mt-6 text-lg font-medium"><a href="mailto:your.email@example.com"
+            class="underline underline-offset-4 decoration-gray-300 hover:bg-gray-100 rounded px-1">sagar.aidata@gmail.com</a>
+        </p>
+        <p class="text-base sm:text-gray-700">Mob: +91-9104371519</p>
+        <div class="mt-8 flex items-center justify-center gap-5" aria-label="Social links">
+          <a href="https://github.com/sagarsy2050" class="p-2 rounded-full border border-gray-200 hover:bg-gray-100"
+            aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
+              <path
+                d="M12 2C6.477 2 2 6.486 2 12.021c0 4.428 2.865 8.184 6.839 9.504.5.093.682-.216.682-.48 0-.236-.01-1.018-.014-1.847-2.782.606-3.369-1.19-3.369-1.19-.455-1.168-1.11-1.48-1.11-1.48-.908-.623.07-.611.07-.611 1.004.071 1.532 1.035 1.532 1.035.892 1.535 2.341 1.091 2.91.835.091-.65.35-1.09.636-1.342-2.22-.253-4.555-1.113-4.555-4.952 0-1.093.39-1.988 1.03-2.689-.104-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.027A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.297 2.747-1.027 2.747-1.027.547 1.378.204 2.397.1 2.65.64.701 1.028 1.596 1.028 2.689 0 3.849-2.339 4.696-4.566 4.944.358.31.678.922.678 1.86 0 1.344-.012 2.427-.012 2.757 0 .266.18.578.688.48A10.026 10.026 0 0 0 22 12.02C22 6.486 17.523 2 12 2z" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/sagarsy2050/"
+            class="p-2 rounded-full border border-gray-200 hover:bg-gray-100" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
+              <path
+                d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.24 8.339h4.52V24H.24V8.339zM8.338 8.339h4.332v2.133h.062c.603-1.143 2.078-2.346 4.279-2.346 4.578 0 5.424 3.014 5.424 6.936V24h-4.72v-6.942c0-1.654-.03-3.78-2.304-3.78-2.307 0-2.661 1.803-2.661 3.665V24H8.338V8.339z" />
+            </svg>
+          </a>
+          <a href="https://www.kaggle.com/sagarsy2050/"
+            class="p-2 rounded-full border border-gray-200 hover:bg-gray-100" aria-label="Kaggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
+              <path d="M6.5 4h3v6.6L16.3 4H20l-6.9 7.4L21 20h-3.9l-7.6-8v8h-3V4z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-gray-200 text-center text-sm text-gray-500">
+      <p>© <span id="year"></span> Sagar Yadav All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileNav = document.getElementById('mobileNav');
+    menuBtn?.addEventListener('click', () => {
+      const isHidden = mobileNav.classList.contains('hidden');
+      mobileNav.classList.toggle('hidden', !isHidden);
+      menuBtn.setAttribute('aria-expanded', String(isHidden));
+    });
+
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>
